@@ -1,0 +1,60 @@
+@import './variables';
+@import './overrides';
+@import './global';
+@import './theme';
+
+@import './button';
+@import './menu-bar';
+@import './carousel';
+@import './dual-image-link';
+@import './header';
+@import './animated';
+@import './icon-row';
+@import './background-image';
+@import './pricing';
+@import './image-row';
+@import './toggle';
+@import './blog';
+@import './post-grid';
+@import './post-masonry';
+@import './masonry-posts';
+@import './tag-row';
+@import './navigation';
+@import './footer';
+@import './comment';
+@import './lavish-table';
+
+/* Pages */
+
+@import './post-editor';
+@import './login';
+@import './home';
+@import './post-viewer';
+@import './admin-page';
+
+/* Pages */
+
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 4em 20px;
+}
+
+.overlay::before {    
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.3) 84%, rgba(0, 0, 0, 0.2) 100%);
+}

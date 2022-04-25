@@ -1,0 +1,9 @@
+.lavish-animate {
+    visibility: hidden;
+
+    width: 100%;
+
+    &.animated {
+        visibility: visible;
+    }
+}

@@ -1,0 +1,20 @@
+.lavish-footer {
+    width: 100%;
+    padding: 5%;
+    position: relative;
+    background: #444;
+    border-top: 1px solid $border;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            margin: 20px;
+            color: $secondary;
+        }
+    }
+    p {
+        color: white;
+    }
+}

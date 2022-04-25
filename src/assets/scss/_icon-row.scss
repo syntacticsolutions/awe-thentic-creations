@@ -1,0 +1,33 @@
+.lavish-icon-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px 10%;
+    font-weight: 300;
+
+    .single-feature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 10px;
+        width: 250px;
+
+        .lavish-animate {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        h3 {
+            color:white;
+        }
+
+        i {
+            color: $primary;
+            font-size: 80px;
+        }
+    }
+}

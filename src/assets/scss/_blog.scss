@@ -1,0 +1,43 @@
+.home {
+    padding: 4% 0;
+
+    h1 {
+        width: 100%;
+        color: #999;
+    }
+
+    .featured-posts-container {
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .home {
+        h1 {
+            margin: 5;
+            margin-block-start: 1.5em;
+            margin-block-end: 1.5em;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .featured-posts-container {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .home {
+        .featured-posts-container,
+        .trending-posts-container {
+            > a:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}

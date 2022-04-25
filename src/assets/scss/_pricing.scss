@@ -1,0 +1,49 @@
+.lavish-pricing {
+
+    .row {
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .single-pricing {
+        background: #1a1a1a;
+        padding: 40px 20px;
+        border: 1px solid transparent;
+        transition: .3s;
+        margin-bottom: 30px;
+    }
+    .pricing-card {
+        max-width: 380px;
+    }
+    .pricing-header {
+        padding-bottom: 23px;
+        h4 {
+            font-weight: 400;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        span {
+            position: relative;
+            font-family: teko,sans-serif;
+            color: $secondary;
+            font-weight: 400;
+            font-size: 30px;
+        }
+    }
+    .pricing-body {
+        border-top: 1px solid #313131;
+        padding-top: 27px;
+        padding-bottom: 32px;
+
+        ul li {
+            font-family: teko,sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 40px;
+            color: #fff;
+            list-style-type: none;
+        }
+    }
+    button {
+        width: 150px;
+    }
+}
