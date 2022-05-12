@@ -1,0 +1,67 @@
+.masonry-container {
+    max-width: 1800px;
+
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+
+    .item-container:nth-child(even) {
+        float: right;
+        padding-left: 20px;
+    }
+
+    .item-container:nth-child(odd) {
+        float: left;
+        padding-right: 20px;
+    }
+
+    .item-container {
+        background: white;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 50vw;
+        height: 80vh;
+        max-width: 900px;
+        color: black;
+        // min-width: 600px;
+
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: uppercase;
+            font-style: normal;
+            padding-top: 100px;
+            font-style: underline;
+        }
+
+        h2, h3, p, a {
+            text-align: left;
+            margin: 40px;
+            color: '#222'
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 36px;
+        }
+
+        h2, p {
+            color: #9e9a94;
+        }
+
+        figure, img {
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+}

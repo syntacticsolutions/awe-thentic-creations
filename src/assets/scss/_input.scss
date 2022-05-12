@@ -1,0 +1,27 @@
+
+input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], textarea {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    margin: 0 0 20px;
+    padding: 13px 25px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: inherit;
+    color: #bdb5aa;
+    background-color: transparent;
+    border: 1px solid #bdb5aa;
+    border-radius: 0;
+    outline: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-transition: color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+    -o-transition: color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+    transition: color .2s ease-out,background-color .2s ease-out,border-color .2s ease-out;
+}
+
+textarea {
+    height: 137px;
+}
