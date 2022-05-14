@@ -12,6 +12,8 @@ export const ContactForm = () => {
     setData({ ...data, [key]: e.target.value });
   };
 
+  console.log({ data });
+
   async function sendText() {
     if (recaptchaVerified) {
       const response = await fetch(
@@ -28,27 +30,34 @@ export const ContactForm = () => {
   }
 
   async function onChange(value: any) {
+    console.log(value);
     const url =
       "https://us-central1-directed-galaxy-221521.cloudfunctions.net/messaging-backend/verify";
 
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: value,
-      }),
-    });
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: value,
+        }),
+      });
 
-    const data = await response.json();
+      const data = await response.json();
+      console.log({ data });
 
-    if (data.responseCode === 0) {
-      setRecaptchaVerified(true);
+      if (data.responseCode === 0) {
+        setRecaptchaVerified(true);
+      }
+    } catch (err) {
+      console.log({ err });
+      return;
     }
   }
   return (
-    <div className="contact-form-container">
+    <div className="contact-form-container" id="contact-form">
       <div className="form-description">
         <h2>Ready to get in touch?</h2>
         <p>Make an Event Request</p>
@@ -83,6 +92,7 @@ export const ContactForm = () => {
         <ReCAPTCHA
           sitekey="6LcFxeofAAAAAJcRIQ1-uhuGa0fpH8rUGnKDPsu9"
           onChange={onChange}
+          onErrored={console.log}
           style={{ marginBottom: "20px" }}
         />
         <button

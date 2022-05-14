@@ -11,21 +11,25 @@ const HighlightContent = ({ title, subTitle, description, link }: any) => {
   );
 };
 
+const strawBerryCheeseCake = require("../../assets/img/strawberry-cake.jpg");
+const padTai = require("../../assets/img/pad-tai.jpg");
+const irishStew = require("../../assets/img/irish-stew.jpg");
+
 const content = [
   {
     type: "image",
-    src:
-      "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80",
+    src: irishStew,
+    alt: "irish-stew",
   },
   {
     content: function Content() {
       return (
         <div>
           <HighlightContent
-            title="catering"
+            title="Irish Stew"
             subTitle="Social Events"
             description="We love to host catering events. We offer chef, bartender and food service. Make your event unforgettable by hiring a highly competent team to host your events!"
-            link="#"
+            link="#contact-form"
           />
         </div>
       );
@@ -36,40 +40,38 @@ const content = [
       return (
         <div>
           <HighlightContent
-            title="catering"
-            subTitle="Corporate Parties"
-            description="Did you just finish that project and would like to celebrate? We will happily come to the office to give you an experience of a lifetime."
-            link="#"
+            title="Pad Tai"
+            subTitle="Personal Chef"
+            description="Are you looking for the pefect person to cook for you in-home? I have amazing experience cooking some of the highest quality foods with any type of cuisine for my clients."
+            link="#contact-form"
           />
         </div>
       );
     },
-    link: "#",
   },
   {
     type: "image",
-    src:
-      "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    src: padTai,
+    alt: "pad-tai",
   },
   {
     type: "image",
-    src:
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
+    src: strawBerryCheeseCake,
+    alt: "strawberry-cake",
   },
   {
     content: function Content() {
       return (
         <div>
           <HighlightContent
-            title="catering"
+            title="Strawberry Cheesecake"
             subTitle="Weddings"
             description="Our weddings are the best! Not only do we have the best food, but we also have the best professional photographers around. Let us make your event last the test of time."
-            link="#"
+            link="#contact-form"
           />
         </div>
       );
     },
-    link: "#",
   },
 ];
 
@@ -80,7 +82,7 @@ export const MasonryLayout = () => {
         if (item.type === "image") {
           return (
             <figure className="item-container">
-              <img src={item.src} />
+              <img src={item.src} alt={`${item.alt}-image`} />
             </figure>
           );
         } else if (item.content) {

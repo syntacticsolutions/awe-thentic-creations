@@ -11,27 +11,28 @@ type CarouselProps = {
   images: Image[];
 };
 
+const steakImage = require("../../assets/img/steak.jpg");
+const cakeImage = require("../../assets/img/cake.jpg");
+const sopesImage = require("../../assets/img/sopes.jpg");
+
 const tempImages = [
   {
-    src:
-      "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2148&q=80",
-    title: "title",
+    src: sopesImage,
+    title: "Hispanic Cuisine",
     description:
-      "some description that describes this image and is really awesome!",
+      "Our Hispanic dishes contain all of the five food groups as well as AweThentic salsas that are out of this world!",
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-    title: "title",
+    src: steakImage,
+    title: "Steaks",
     description:
-      "some description that describes this image and is really awesome!",
+      "We make the most perfectly temped steaks and add the perfect spices to bring out the most flavor.",
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
-    title: "title",
+    src: cakeImage,
+    title: "Cakes",
     description:
-      "some description that describes this image and is really awesome!",
+      "We make professional cakes for any occasion! Every bite is a delicious delight!",
   },
 ];
 
