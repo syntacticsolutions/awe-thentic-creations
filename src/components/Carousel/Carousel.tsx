@@ -1,15 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-
-type Image = {
-  src: string;
-  title: string;
-  description: string;
-};
-
-type CarouselProps = {
-  images: Image[];
-};
+// @ts-ignore
+import { CarouselProps, useCarousel } from "./index.js";
 
 const steakImage = require("../../assets/img/steak.jpg");
 const cakeImage = require("../../assets/img/cake.jpg");
@@ -37,42 +29,12 @@ const tempImages = [
 ];
 
 export const Carousel = ({ images = tempImages }: CarouselProps) => {
-  const [active, setActive] = useState(1);
-  const [transition, setTransition] = useState(false);
-  const [carouselTimeout, setCarouselTimeout] = useState();
-  const first = 0;
-  const last = images.length - 1;
-  const previous = active ? active - 1 : last;
-  const next = active === last ? first : active + 1;
-
-  const transitionActive = useCallback(
-    (index: number) => () => {
-      setTransition(index === previous ? "right" : "left");
-
-      setTimeout(() => {
-        setActive(index);
-        setTransition(false);
-        setTimeout(() => {
-          clearTimeout(carouselTimeout);
-          setCarouselTimeout(null);
-        }, 0);
-      }, 300);
-    },
-    [previous, carouselTimeout]
+  const { transition, transitionActive, previous, next, active } = useCarousel(
+    images
   );
 
-  useEffect(() => {
-    if (!carouselTimeout) {
-      setCarouselTimeout(
-        setTimeout(() => {
-          transitionActive(next)();
-        }, 5000)
-      );
-    }
-  }, [transitionActive, next]);
-
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" id="home">
       <div className="chevron-left" onClick={transitionActive(previous)}>
         <BsChevronLeft color="white" />
       </div>

@@ -77,7 +77,7 @@ const content = [
 
 export const MasonryLayout = () => {
   return (
-    <div className="masonry-container">
+    <div className="masonry-container" id="services">
       {content.map((item) => {
         if (item.type === "image") {
           return (

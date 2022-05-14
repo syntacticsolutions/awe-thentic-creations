@@ -5,6 +5,7 @@ import { OwnerQuote } from "./components/OwnerQuote";
 import { MasonryLayout } from "./components/MasonryLayout";
 import { Parallax } from "./components/Parallax";
 import { ContactForm } from "./components/ContactForm";
+import { Testimonials } from "./components/Testimonials";
 
 import "./app.styles.scss";
 import "./assets/css/banquet-core.min.css";
@@ -21,6 +22,7 @@ class App extends React.Component {
         <OwnerQuote />
         <MasonryLayout />
         <Parallax image={beefRavioli} />
+        <Testimonials />
         <ContactForm />
       </div>
     );
