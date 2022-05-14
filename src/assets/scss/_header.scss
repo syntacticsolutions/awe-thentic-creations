@@ -8,12 +8,13 @@
     left: 0;
     display: flex!important;
     width: 100%;
+    z-index: 99999;
 }
 
 .qodef-header-navigation {
     display: flex;
     align-items: center;
-    margin-right: 100px;
+    // margin-right: 25%;
 }
 
 #qodef-page-header-inner {
@@ -22,7 +23,8 @@
 
 #qodef-page-header .qodef-widget-holder {
     float: right;
-    display: none;
+    z-index: 9999;
+    // display: none;
 }
 
 .qodef-header-logo-link {
@@ -38,7 +40,6 @@
         // position: relative;
     }
     .qodef-header-navigation.active > ul {
-        // display: none;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -54,6 +55,7 @@
 
     .qodef-header-navigation > ul {
         // display: none;
+        width: 0;
         top: -100px;
         transition: 300ms ease all;
     }

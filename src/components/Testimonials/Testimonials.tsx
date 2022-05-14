@@ -33,11 +33,14 @@ export const Testimonials = () => {
         style={{ background: "rgba(255,192,203,0.3)" }}
       />
       <section className="carousel-content">
-        <h1 style={{ color: "#bbb" }}>Testimonials</h1>
-        <h2 style={{ color: "#aaa" }} className={transition ? "" : "active"}>
+        <h1 style={{ color: "#999", fontSize: "45px" }}>Testimonials</h1>
+        <h2 style={{ color: "#999" }} className={transition ? "" : "active"}>
           {testimonials[active].title}
         </h2>
-        <p style={{ color: "#aaa" }} className={transition ? "" : "active"}>
+        <p
+          style={{ color: "#999", fontSize: "27px", lineHeight: "36px" }}
+          className={transition ? "" : "active"}
+        >
           {testimonials[active].description}
         </p>
       </section>
